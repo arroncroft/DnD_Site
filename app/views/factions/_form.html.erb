@@ -1,0 +1,10 @@
+<%= simple_form_for @faction do |f| %>
+  <span style="">
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :image, label: 'Upload Image' %>
+    <%= f.input :place_id, collection: Place.order(:name), label: 'Faction Home' %>
+
+    <%= f.button :submit, :class => "btn btn-success" %>
+  </span>
+<% end %>

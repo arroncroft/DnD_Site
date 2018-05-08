@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @party_member.name %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @party_member.player %>
+</p>
+
+<p>
+  <strong>Race:</strong>
+  <%= @party_member.race %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @party_member.description %>
+</p>
+
+<p>
+  <strong>Class:</strong>
+  <%= @party_member.rpg_class %>
+</p>
+
+<p>
+  <strong>Place of Origin:</strong>
+  <% if @party_member.place.present? %>
+    <%= @party_member.place.name %>
+  <% end %>
+</p>
+
+<p>
+  <strong>Backstory:</strong>
+  <%= @party_member.backstory %>
+</p>
+
+<%= link_to 'Edit', edit_party_member_path(@party_member) %> |
+<%= link_to 'Back', party_members_path %>

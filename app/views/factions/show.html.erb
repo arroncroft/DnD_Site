@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @faction.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @faction.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @faction.image %>
+</p>
+
+<p>
+  <strong>Faction Home:</strong>
+  <% if @faction.place.present? %>
+    <%= @faction.place.name %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_faction_path(@faction) %> |
+<%= link_to 'Back', factions_path %>

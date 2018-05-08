@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Party Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Player</th>
+      <th>Description</th>
+      <th>Class</th>
+      <th>Place Of Origin</th>
+      <th>Backstory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @party_members.each do |party_member| %>
+      <tr>
+        <td><%= party_member.name %></td>
+        <td><%= party_member.player %></td>
+        <td><%= party_member.description %></td>
+        <td><%= party_member.rpg_class %></td>
+        <% if party_member.place.present? %>
+          <td><%= party_member.place.name %></td>
+        <% else %>
+          <td></td>
+        <% end %>
+        <td><%= party_member.backstory %></td>
+        <td><%= link_to 'Show', party_member %></td>
+        <td><%= link_to 'Edit', edit_party_member_path(party_member) %></td>
+        <td><%= link_to 'Destroy', party_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Party Member', new_party_member_path %>
