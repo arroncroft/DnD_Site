@@ -1,9 +1,9 @@
 <%= simple_form_for @place do |f| %>
   <span style="">
     <%= f.input :name %>
-    <%= f.input :description %>
-    <%= f.input :image, label: 'Upload Image' %>
     <%= f.input :region_id, collection: Region.order(:name), label: 'Select Region', include_blank: false %>
+    <%= f.input :description %>
+    <%= f.input :image, as: :file, label: 'Upload Image' %>
 
     <%= f.button :submit, :class => "btn btn-success" %>
   </span>

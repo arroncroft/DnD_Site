@@ -3,8 +3,8 @@
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :place_id, collection: Place.order(:name), label: 'Home' %>
-    <%= f.input :place_id, collection: Faction.order(:name), label: 'Faction' %>
-    <%= f.input :image, label: 'Upload Image' %>
+    <%= f.input :faction_id, collection: Faction.order(:name), label: 'Faction' %>
+    <%= f.input :image, as: :file, label: 'Upload Image' %>
 
     <%= f.button :submit, :class => "btn btn-success" %>
   </span>

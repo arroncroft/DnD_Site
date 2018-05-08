@@ -4,10 +4,10 @@
     <%= f.input :player, label: "Player Name" %>
     <%= f.input :rpg_class, label: "Class" %>
     <%= f.input :race %>
+    <%= f.input :place_id, collection: Place.order(:name), label: 'Place of Origin' %>
     <%= f.input :description, label: "A brief description of your character" %>
     <%= f.input :backstory, label: "Your character's history" %>
-    <%= f.input :image, label: 'Upload Image' %>
-    <%= f.input :place_id, collection: Place.order(:name), label: 'Place of Origin' %>
+    <%= f.input :image, as: :file, label: 'Upload Image' %>
 
     <%= f.button :submit, :class => "btn btn-success" %>
   </span>
