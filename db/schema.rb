@@ -17,22 +17,22 @@ ActiveRecord::Schema.define(version: 20180508211958) do
     t.string "image"
     t.string "race"
     t.text "description"
-    t.integer "place_id"
-    t.integer "faction_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["faction_id"], name: "index_characters_on_faction_id"
-    t.index ["place_id"], name: "index_characters_on_place_id"
+    t.integer "places_id"
+    t.integer "factions_id"
+    t.index ["factions_id"], name: "index_characters_on_factions_id"
+    t.index ["places_id"], name: "index_characters_on_places_id"
   end
 
   create_table "factions", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.string "image"
-    t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["place_id"], name: "index_factions_on_place_id"
+    t.integer "places_id"
+    t.index ["places_id"], name: "index_factions_on_places_id"
   end
 
   create_table "party_members", force: :cascade do |t|
@@ -46,20 +46,18 @@ ActiveRecord::Schema.define(version: 20180508211958) do
     t.text "description"
     t.text "backstory"
     t.string "image"
-    t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["place_id"], name: "index_party_members_on_place_id"
+    t.integer "places_id"
+    t.index ["places_id"], name: "index_party_members_on_places_id"
   end
 
   create_table "places", force: :cascade do |t|
     t.string "name"
     t.string "image"
     t.text "description"
-    t.integer "region_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["region_id"], name: "index_places_on_region_id"
   end
 
   create_table "regions", force: :cascade do |t|
@@ -67,6 +65,8 @@ ActiveRecord::Schema.define(version: 20180508211958) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "places_id"
+    t.index ["places_id"], name: "index_regions_on_places_id"
   end
 
 end

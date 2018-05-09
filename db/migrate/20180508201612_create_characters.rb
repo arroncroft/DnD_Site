@@ -5,8 +5,6 @@ class CreateCharacters < ActiveRecord::Migration[5.1]
       t.string :image
       t.string :race
       t.text :description
-      t.references :place
-      t.references :faction
 
       t.timestamps
     end

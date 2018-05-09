@@ -4,7 +4,6 @@ class CreateFactions < ActiveRecord::Migration[5.1]
       t.string :name
       t.text :description
       t.string :image
-      t.references :place
 
       t.timestamps
     end
