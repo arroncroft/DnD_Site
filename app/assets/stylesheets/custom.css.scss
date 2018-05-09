@@ -1,0 +1,20 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+
+//navbar
+.nav {
+  font-size: 1.2em;
+}
+ul.navbar-nav {
+  margin-left: 4em;
+}

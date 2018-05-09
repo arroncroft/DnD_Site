@@ -1,0 +1,24 @@
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#" id="name">
+        Arron's DnD Campaign
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><%= link_to "Map", map_index_path %></li>
+        <li><%= link_to "Regions", regions_path %></li>
+        <li><%= link_to "Places", places_path %></li>
+        <li><%= link_to "Factions", factions_path %></li>      
+        <li><%= link_to "Characters", characters_path %></li>
+        <li><%= link_to "Party", party_members_path %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
