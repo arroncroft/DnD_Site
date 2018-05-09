@@ -4,10 +4,13 @@ class CreatePartyMembers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :player
       t.string :race
+      t.string :subrace
       t.string :rpg_class
-      t.string :image
+      t.string :subclass
+      t.string :background
       t.text :description
       t.text :backstory
+      t.string :image
       t.references :place
 
       t.timestamps

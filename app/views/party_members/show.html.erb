@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Description:</strong>
-  <%= @party_member.description %>
+  <strong>Subrace:</strong>
+  <%= @party_member.subrace %>
 </p>
 
 <p>
@@ -26,10 +26,25 @@
 </p>
 
 <p>
+  <strong>Subclass:</strong>
+  <%= @party_member.subclass %>
+</p>
+
+<p>
+  <strong>Background:</strong>
+  <%= @party_member.background %>
+</p>
+
+<p>
   <strong>Place of Origin:</strong>
   <% if @party_member.place.present? %>
     <%= @party_member.place.name %>
   <% end %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @party_member.description %>
 </p>
 
 <p>

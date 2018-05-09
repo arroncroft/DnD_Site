@@ -39,10 +39,13 @@ ActiveRecord::Schema.define(version: 20180508211958) do
     t.string "name"
     t.string "player"
     t.string "race"
+    t.string "subrace"
     t.string "rpg_class"
-    t.string "image"
+    t.string "subclass"
+    t.string "background"
     t.text "description"
     t.text "backstory"
+    t.string "image"
     t.integer "place_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

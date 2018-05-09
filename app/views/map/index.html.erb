@@ -1,2 +1,18 @@
-<h1>Map#index</h1>
-<p>Find me in app/views/map/index.html.erb</p>
+<div class="row">
+  <div class="left-column">
+    <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">
+        The Party
+      </a>
+      <% @party_members.each do |party_member| %>
+        <%= link_to "#{party_member.name}", party_member_path(party_member), 
+          class: "list-group-item list-group-item-action" %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="center-column">
+    <h1>Map of the Rosmar Sea and the lands of Rhydatria</h1>
+    <%= image_tag('world_map.png') %>
+  </div>
+</div>

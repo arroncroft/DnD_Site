@@ -69,6 +69,6 @@ class PartyMembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def party_member_params
-      params.require(:party_member).permit(:name, :player, :description, :race, :rpg_class, :image, :place_id, :backstory)
+      params.require(:party_member).permit(:name, :player, :description, :race, :subrace, :rpg_class, :subclass, :background, :image, :place_id, :backstory)
     end
 end

@@ -16,3 +16,35 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  padding-top: 60px;
+}
+section {
+  overflow: auto;
+}
+textarea {
+  resize: vertical;
+}
+
+//navbar
+.navbar {
+  #logo {
+    margin-top: -.5em;
+  }
+  .navbar-header {
+    padding-right: 5em;
+    a {
+      color: white;
+    }
+  }
+  ul.nav {
+    a {
+      color: white;
+      font-size: 1.25em;
+    }
+    a:hover {
+      color: red;
+    }
+  }
+}
