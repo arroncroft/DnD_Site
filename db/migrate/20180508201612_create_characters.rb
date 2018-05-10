@@ -6,6 +6,9 @@ class CreateCharacters < ActiveRecord::Migration[5.1]
       t.string :race
       t.text :description
 
+      t.belongs_to :place
+      t.belongs_to :faction
+
       t.timestamps
     end
   end

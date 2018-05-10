@@ -12,6 +12,8 @@ class CreatePartyMembers < ActiveRecord::Migration[5.1]
       t.text :backstory
       t.string :image
 
+      t.belongs_to :place
+
       t.timestamps
     end
   end

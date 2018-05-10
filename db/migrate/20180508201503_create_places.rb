@@ -5,6 +5,8 @@ class CreatePlaces < ActiveRecord::Migration[5.1]
       t.string :image
       t.text :description
 
+      t.belongs_to :region
+
       t.timestamps
     end
   end
