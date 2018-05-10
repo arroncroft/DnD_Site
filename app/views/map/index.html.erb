@@ -1,18 +1,24 @@
 <div class="row">
   <div class="left-column">
     <div class="list-group">
-      <a href="#" class="list-group-item list-group-item-action active">
+      <span class="list-group-item list-group-item-action active">
         The Party
-      </a>
-      <% @party_members.each do |party_member| %>
-        <%= link_to "#{party_member.name}", party_member_path(party_member), 
-          class: "list-group-item list-group-item-action" %>
+      </span>
+      <% if @party_members.empty? %>
+        <% @party_members.each do |party_member| %>
+          <%= link_to "#{party_member.name}", party_member_path(party_member), 
+            class: "list-group-item list-group-item-action" %>
+        <% end %>
+      <% else %>
+        <span class="list-group-item list-group-item-action">No party members yet!</span>
       <% end %>
     </div>
   </div>
 
   <div class="center-column">
-    <h1>Map of the Rosmar Sea and the lands of Rhydatria</h1>
-    <%= image_tag('world_map.png') %>
+    <span class="list-group-item list-group-item-action active">
+      Rhydatria and the Bosmar Sea
+    </span>
+    <%= link_to image_tag('world_map.png'), 'https://i.redd.it/1qujfkjpync01.png' %>
   </div>
 </div>
